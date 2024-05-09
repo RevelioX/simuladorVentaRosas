@@ -1,4 +1,4 @@
-package SIM.simuladorventarosas.modelo;
+package SIM.simuladorventarosas.model;
 
 public class Stock {
     public Integer cantStock;

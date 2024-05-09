@@ -1,9 +1,4 @@
-package SIM.simuladorventarosas.modelo;
-
-import SIM.simuladorventarosas.modelo.calculos.BuscadorValorSegunNumeroAleatorio;
-
-import java.util.HashMap;
-import java.util.Map;
+package SIM.simuladorventarosas.model;
 
 public class DiaNublado extends Dia {
 

@@ -1,4 +1,4 @@
-package SIM.simuladorventarosas.modelo;
+package SIM.simuladorventarosas.model;
 
 import java.util.ArrayList;
 import java.util.List;

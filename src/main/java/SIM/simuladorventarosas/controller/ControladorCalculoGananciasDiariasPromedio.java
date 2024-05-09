@@ -4,9 +4,9 @@ package SIM.simuladorventarosas.controller;
 import SIM.simuladorventarosas.generators.Generador;
 import SIM.simuladorventarosas.generators.GeneradorNumerosUniformes;
 import SIM.simuladorventarosas.interfaces.InterfazResultadorImplConsola;
-import SIM.simuladorventarosas.modelo.Dia;
-import SIM.simuladorventarosas.modelo.GestorEconomico;
-import SIM.simuladorventarosas.modelo.Stock;
+import SIM.simuladorventarosas.model.Dia;
+import SIM.simuladorventarosas.model.GestorEconomico;
+import SIM.simuladorventarosas.model.Stock;
 
 public class ControladorCalculoGananciasDiariasPromedio {
     Integer cantidadDias;

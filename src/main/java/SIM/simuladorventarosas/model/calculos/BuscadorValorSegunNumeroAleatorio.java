@@ -1,4 +1,4 @@
-package SIM.simuladorventarosas.modelo.calculos;
+package SIM.simuladorventarosas.model.calculos;
 
 import java.util.Map;
 

@@ -1,6 +1,6 @@
-package SIM.simuladorventarosas.modelo;
+package SIM.simuladorventarosas.model;
 
-import SIM.simuladorventarosas.modelo.calculos.BuscadorValorSegunNumeroAleatorio;
+import SIM.simuladorventarosas.model.calculos.BuscadorValorSegunNumeroAleatorio;
 
 import java.util.HashMap;
 import java.util.Map;
