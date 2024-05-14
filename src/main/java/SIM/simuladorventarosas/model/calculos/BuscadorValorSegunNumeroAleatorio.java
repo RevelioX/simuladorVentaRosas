@@ -1,23 +1,35 @@
 package SIM.simuladorventarosas.model.calculos;
 
+import SIM.simuladorventarosas.auxiliar.ParProbabilidadFlor;
+
+import java.util.List;
 import java.util.Map;
 
 public class BuscadorValorSegunNumeroAleatorio {
-    private Map<Double, Integer> probabilidades;
+    private List<ParProbabilidadFlor> probabilidades;
     private Double numeroAleatorio;
-    public BuscadorValorSegunNumeroAleatorio(Map<Double, Integer> probabilidades, double numeroAleatorio){
+    public BuscadorValorSegunNumeroAleatorio(List<ParProbabilidadFlor> probabilidades, double numeroAleatorio){
         this.probabilidades = probabilidades;
         this.numeroAleatorio = numeroAleatorio;
     }
 
+//    public Integer buscar(){
+//        double probabilidadAcumulada = 0;
+//        for( Map.Entry<Double, Integer> parProbabilidadDemanda : probabilidades.entrySet()){
+//            probabilidadAcumulada += parProbabilidadDemanda.getKey();
+//            if(numeroAleatorio < probabilidadAcumulada){
+//                return parProbabilidadDemanda.getValue();
+//            }
+//        }
+//        return probabilidades.get(probabilidades.size() - 1);
+//    }
+
     public Integer buscar(){
-        double probabilidadAcumulada = 0;
-        for( Map.Entry<Double, Integer> parProbabilidadDemanda : probabilidades.entrySet()){
-            probabilidadAcumulada += parProbabilidadDemanda.getKey();
-            if(numeroAleatorio < probabilidadAcumulada){
-                return parProbabilidadDemanda.getValue();
+        for( ParProbabilidadFlor par: probabilidades){
+            if( numeroAleatorio < par.getProbabilidad()){
+                return par.getCantFlores();
             }
         }
-        return probabilidades.get(probabilidades.size() - 1);
+        return probabilidades.get(probabilidades.size() -1 ).getCantFlores();
     }
 }
