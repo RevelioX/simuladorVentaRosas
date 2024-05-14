@@ -99,7 +99,7 @@ public class DTOTabla {
                 ", nroAleatorioTipoDia=" + nroAleatorioTipoDia +
                 ", tipoDía='" + tipoDía + '\'' +
                 ", stock=" + stock +
-                //", nroAleatorioDemanda=" + nroAleatorioDemanda +
+                ", nroAleatorioDemanda=" + nroAleatorioDemanda +
                 ", demanda=" + demanda +
                 ", beneficio=" + beneficio +
                 ", costos=" + costos +

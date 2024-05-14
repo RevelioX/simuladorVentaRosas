@@ -18,13 +18,13 @@ public class Stock {
     }
 
     public void comprar(){
-        cantStock += cantDocenasCompradasPorDia;
+        cantStock = cantDocenasCompradasPorDia;
         gestorEconomico.añadirCosto((double)cantDocenasCompradasPorDia * 8);
     }
 
     public void vender(Integer cantidadDemandada){
         cantidadesDemandadas.add(cantidadDemandada);
-        if( cantidadDemandada < cantStock){
+        if( cantidadDemandada <= cantStock){
             cantStock = cantStock - cantidadDemandada;
             gestorEconomico.añadirBeneficio((double)cantidadDemandada * 12 + cantStock * 1.2);
         }else{

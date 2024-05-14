@@ -29,6 +29,7 @@ public class GestorEconomico {
     public void añadirBeneficio(Double beneficio){
         this.beneficios += beneficio;
         listaBeneficios.add(beneficio);
+        System.out.println("BENEFICIO: " + beneficio);
     }
 
     public Double getGananciaAbsoluta(){

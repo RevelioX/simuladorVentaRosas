@@ -4,7 +4,6 @@ package SIM.simuladorventarosas.controller;
 import SIM.simuladorventarosas.auxiliar.DTOTabla;
 import SIM.simuladorventarosas.generators.Generador;
 import SIM.simuladorventarosas.generators.GeneradorNumerosUniformes;
-import SIM.simuladorventarosas.interfaces.InterfazResultadorImplConsola;
 import SIM.simuladorventarosas.model.Dia;
 import SIM.simuladorventarosas.model.GestorEconomico;
 import SIM.simuladorventarosas.model.Stock;
@@ -51,19 +50,19 @@ public void iniciarSimulacion(){
 
     for(int i = 0; i < listaCostos.size(); i++){
         DTOTabla itemTabla = listaDtoTabla.get(i);
-        itemTabla.setBeneficio((double) Math.round(listaBeneficios.get(i) * 100) /100);
-        itemTabla.setCostos((double) Math.round(listaCostos.get(i) * 100) / 100);
-        itemTabla.setGanancia((double) Math.round((listaBeneficios.get(i) - listaCostos.get(i)) * 100)  / 100);
+        itemTabla.setBeneficio(listaBeneficios.get(i));
+        itemTabla.setCostos(Math.round(listaCostos.get(i)));
+        itemTabla.setGanancia(Math.round((listaBeneficios.get(i) - listaCostos.get(i))));
         itemTabla.setDemanda(cantidadesDemandadas.get(i));
     }
     for(DTOTabla dto: listaDtoTabla){
         System.out.println(dto.toString());
     }
-   mostrarResultadosFinSimulación(gestorEconomico.getGananciaAbsoluta() / cantidadDias, listaDtoTabla);
+   //mostrarResultadosFinSimulación(gestorEconomico.getGananciaAbsoluta() / cantidadDias, listaDtoTabla);
 }
 public void mostrarResultadosFinSimulación(Double gananciaPromedio, List<DTOTabla> listaDTOTabla){
-    InterfazResultadorImplConsola interfazResutados = new InterfazResultadorImplConsola();
-    interfazResutados.crearNuevo(null, gananciaPromedio);
+    //InterfazResultadorImplConsola interfazResutados = new InterfazResultadorImplConsola();
+   // interfazResutados.crearNuevo(null, gananciaPromedio);
 
 }
 }
