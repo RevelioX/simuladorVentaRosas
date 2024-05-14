@@ -23,13 +23,11 @@ public class GestorEconomico {
 
     public void añadirCosto(Double costo){
         this.costos += costo;
-        System.out.println("COSTO: " + costo);
         listaCostos.add( costo);
     }
 
     public void añadirBeneficio(Double beneficio){
         this.beneficios += beneficio;
-        System.out.println("BENEFICIO: " + beneficio);
         listaBeneficios.add(beneficio);
     }
 
@@ -37,9 +35,12 @@ public class GestorEconomico {
         return beneficios - costos;
     }
 
-    public List<Double> getGananciasDiarias(){
-        return null;
-        //TODO- haganle acordar a mariano que implemente este metodo, si le pinta.
+    public List<Double> getListaCostos(){
+        return listaCostos;
+    }
+
+    public List<Double> getListaBeneficios(){
+        return listaBeneficios;
     }
 
 }
