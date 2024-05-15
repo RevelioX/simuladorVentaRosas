@@ -4,10 +4,13 @@ package SIM.simuladorventarosas.controller;
 import SIM.simuladorventarosas.auxiliar.DTOTabla;
 import SIM.simuladorventarosas.generators.Generador;
 import SIM.simuladorventarosas.generators.GeneradorNumerosUniformes;
+import SIM.simuladorventarosas.interfaces.InterfazSimulacion;
 import SIM.simuladorventarosas.model.Dia;
 import SIM.simuladorventarosas.model.GestorEconomico;
 import SIM.simuladorventarosas.model.Stock;
 
+import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -58,11 +61,10 @@ public void iniciarSimulacion(){
     for(DTOTabla dto: listaDtoTabla){
         System.out.println(dto.toString());
     }
-   //mostrarResultadosFinSimulación(gestorEconomico.getGananciaAbsoluta() / cantidadDias, listaDtoTabla);
+   mostrarResultadosFinSimulación(gestorEconomico.getGananciaAbsoluta() / cantidadDias, listaDtoTabla);
 }
 public void mostrarResultadosFinSimulación(Double gananciaPromedio, List<DTOTabla> listaDTOTabla){
-    //InterfazResultadorImplConsola interfazResutados = new InterfazResultadorImplConsola();
-   // interfazResutados.crearNuevo(null, gananciaPromedio);
-
+    InterfazSimulacion interfazSimulacion = new InterfazSimulacion();
+    interfazSimulacion.MostrarDatos(listaDTOTabla, gananciaPromedio);
 }
 }
