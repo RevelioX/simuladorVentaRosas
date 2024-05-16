@@ -41,7 +41,8 @@ public class InterfazInputValoresImplSwing implements InterfazInputValores {
         panel.add(button);
 
         frame.getContentPane().add(panel);
-        frame.pack();
+        frame.setSize(400, 200);
+        frame.setLocationRelativeTo(null);
         frame.setVisible(true);
     }
 

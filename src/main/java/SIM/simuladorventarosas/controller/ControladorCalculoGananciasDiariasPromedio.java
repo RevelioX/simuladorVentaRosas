@@ -11,6 +11,7 @@ import SIM.simuladorventarosas.model.Stock;
 
 import javax.swing.*;
 import java.awt.*;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -55,12 +56,14 @@ public void iniciarSimulacion(){
         DTOTabla itemTabla = listaDtoTabla.get(i);
         itemTabla.setBeneficio(listaBeneficios.get(i));
         itemTabla.setCostos(Math.round(listaCostos.get(i)));
-        itemTabla.setGanancia(Math.round((listaBeneficios.get(i) - listaCostos.get(i))));
+        DecimalFormat df = new DecimalFormat("#.#");
+        itemTabla.setGanancia(Double.parseDouble(df.format(listaBeneficios.get(i) - listaCostos.get(i)).replace(",", ".")));
         itemTabla.setDemanda(cantidadesDemandadas.get(i));
     }
-    for(DTOTabla dto: listaDtoTabla){
-        System.out.println(dto.toString());
-    }
+//    for(DTOTabla dto: listaDtoTabla){
+//        System.out.println(dto.toString());
+//    }
+
    mostrarResultadosFinSimulación(gestorEconomico.getGananciaAbsoluta() / cantidadDias, listaDtoTabla);
 }
 public void mostrarResultadosFinSimulación(Double gananciaPromedio, List<DTOTabla> listaDTOTabla){

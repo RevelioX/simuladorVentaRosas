@@ -8,7 +8,6 @@ public class SimuladorVentaRosasApplication {
 
     public static void main(String[] args) {
         ControladorCalculoGananciasDiariasPromedio controller = new ControladorCalculoGananciasDiariasPromedio();
-        //InterfazInputValoresImplConsola interfaz = new InterfazInputValoresImplConsola(controller);
         InterfazInputValoresImplSwing interfaz = new InterfazInputValoresImplSwing(controller);
 
 
