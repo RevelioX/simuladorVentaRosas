@@ -60,10 +60,6 @@ public void iniciarSimulacion(){
         itemTabla.setGanancia(Double.parseDouble(df.format(listaBeneficios.get(i) - listaCostos.get(i)).replace(",", ".")));
         itemTabla.setDemanda(cantidadesDemandadas.get(i));
     }
-//    for(DTOTabla dto: listaDtoTabla){
-//        System.out.println(dto.toString());
-//    }
-
    mostrarResultadosFinSimulación(gestorEconomico.getGananciaAbsoluta() / cantidadDias, listaDtoTabla);
 }
 public void mostrarResultadosFinSimulación(Double gananciaPromedio, List<DTOTabla> listaDTOTabla){

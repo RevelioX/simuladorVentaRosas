@@ -11,8 +11,7 @@ public class GestorEconomico {
     private List<Double> listaBeneficios;
 
     //Considero beneficio = precioVenta * cantidadFloresVendidas y
-    //considero ganancia = beneficio - costo. (?No se si economicamente sera correcto,
-    //tampoco me importa)
+    //considero ganancia = beneficio - costo.
 
     public GestorEconomico(){
         costos = (double) 0;
